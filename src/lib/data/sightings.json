@@ -1,0 +1,27 @@
+[
+  {
+    "name": "Patterson-Gimlin Film",
+    "summary": "The iconic 1967 footage captured by Roger Patterson and Bob Gimlin in Bluff Creek, California, showing a large, bipedal ape-like creature walking away.",
+    "frequency": 1
+  },
+  {
+    "name": "Ape Canyon",
+    "summary": "In 1924, a group of miners in Ape Canyon, Washington, reported being attacked by 'apemen' who threw rocks at their cabin throughout the night.",
+    "frequency": 2
+  },
+  {
+    "name": "The Loveland Frogman",
+    "summary": "First sighted in 1955 in Loveland, Ohio, these 3-4 foot tall frog-like humanoids were seen by businessmen and later by police officers in 1972.",
+    "frequency": 3
+  },
+  {
+    "name": "The Dover Demon",
+    "summary": "During 1977 in Dover, Massachusetts, multiple teenagers witnessed a strange, large-headed creature with glowing orange eyes and tendril-like fingers.",
+    "frequency": 4
+  },
+  {
+    "name": "The Mothman of Point Pleasant",
+    "summary": "From 1966 to 1967, residents of Point Pleasant, West Virginia, reported seeing a large winged humanoid with glowing red eyes, often associated with the collapse of the Silver Bridge.",
+    "frequency": 5
+  }
+]
