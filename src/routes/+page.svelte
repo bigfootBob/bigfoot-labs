@@ -1,63 +1,97 @@
-
 <script>
-	import SightingDisplay from '../lib/components/SightingDisplay.svelte';
-	import { frequency } from '../lib/stores/frequency.js';
-
-	/**
-	 * @param {Event} event
-	 */
-	function handleFrequencyChange(event) {
-		// @ts-ignore
-		frequency.set(Number(event.target.value));
-	}
+	// No script needed for this simple navigation view
 </script>
 
-<h1>Bigfoot Labs - Cryptid Frequency Tuner</h1>
+<h1>Bigfoot Labs</h1>
 
-<div class="controls">
-	<label for="frequency">Tuning Frequency: {$frequency}</label>
-	<input
-		type="range"
-		id="frequency"
-		min="1"
-		max="5"
-		step="1"
-		value={$frequency}
-		on:input={handleFrequencyChange}
-	/>
+<div class="grid-container">
+	<a href="/tuner" class="tile tuner">
+		<h2>Tuner</h2>
+		<p>Cryptid Frequency Tuner</p>
+	</a>
+	<a href="/game" class="tile game">
+		<h2>Game</h2>
+		<p>Play the Game</p>
+	</a>
+	<a href="/experiment" class="tile experiment">
+		<h2>Experiment</h2>
+		<p>Lab Experiments</p>
+	</a>
+	<a href="/erotica" class="tile erotica">
+		<h2>Choose your own squatch</h2>
+		<p>Sensual Sasquatch Stories</p>
+	</a>
 </div>
-
-<SightingDisplay />
 
 <style>
 	:global(body) {
-		font-family: Arial, sans-serif;
+		font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+		background-color: #1a1a1a;
+		color: #fff;
+		margin: 0;
 		padding: 2rem;
-		background-color: #f0f2f5;
 	}
 
 	h1 {
 		text-align: center;
-		color: #2c3e50;
+		margin-bottom: 3rem;
+		font-size: 3rem;
+		color: #ddd;
 	}
 
-	.controls {
-		margin: 2rem auto;
-		text-align: center;
-		max-width: 400px;
+	.grid-container {
+		display: grid;
+		grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+		gap: 2rem;
+		max-width: 1200px;
+		margin: 0 auto;
+	}
+
+	.tile {
 		display: flex;
 		flex-direction: column;
+		justify-content: center;
 		align-items: center;
-		gap: 1rem;
+		padding: 3rem;
+		border-radius: 12px;
+		text-decoration: none;
+		color: white;
+		transition:
+			transform 0.2s,
+			box-shadow 0.2s;
+		min-height: 200px;
+		text-align: center;
 	}
 
-	label {
-		font-weight: bold;
-		color: #555;
+	.tile:hover {
+		transform: translateY(-5px);
+		box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
 	}
 
-	input[type='range'] {
-		width: 100%;
-		cursor: pointer;
+	.tile h2 {
+		margin: 0 0 0.5rem 0;
+		font-size: 2rem;
+	}
+
+	.tile p {
+		margin: 0;
+		opacity: 0.8;
+	}
+
+	/* Distinct colors for each tile */
+	.tuner {
+		background: linear-gradient(135deg, #ff6b6b, #ee5253);
+	}
+
+	.game {
+		background: linear-gradient(135deg, #48dbfb, #0abde3);
+	}
+
+	.experiment {
+		background: linear-gradient(135deg, #1dd1a1, #10ac84);
+	}
+
+	.erotica {
+		background: linear-gradient(135deg, #ff9ff3, #f368e0);
 	}
 </style>
